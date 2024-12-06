@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import torch
 
 print(torch.cuda.is_available())
-device = torch.device("cuda" if torch.cuda.is_available() else "mps")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Load a pre-trained YOLOv8 model (YOLOv8n is the nano version; use YOLOv8s, YOLOv8m for larger models)
 model = YOLO("yolov8n.yaml")  # Initialize a new YOLOv8 model
 
